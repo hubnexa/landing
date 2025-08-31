@@ -39,15 +39,18 @@ body {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
+    margin-left: 10px;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
 .nav-links a:hover {
-    color: #00AFFF;
+    background: #00d1ff;
+    color: #0f0f0f;
 }
 
 /* Menú móvil */
@@ -171,7 +174,7 @@ body {
 .feature-box .btn-primary {
     padding: 12px 25px;
     background: #fff;
-    color: #000000;
+    color: #4e4e4e;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;

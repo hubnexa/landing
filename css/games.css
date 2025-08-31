@@ -36,7 +36,7 @@ body {
 .nav-links a {
     color: #e0e0e0;
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 10px;
     font-weight: 600;
     transition: all 0.3s ease;
     padding: 8px 12px;
