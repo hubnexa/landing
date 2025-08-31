@@ -1,0 +1,359 @@
+/* ----------------- Reset y Body ----------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f; /* Más oscuro para modernidad */
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* ----------------- Topbar ----------------- */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.topbar .logo img {
+    height: 45px;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    background: #00d1ff;
+    color: #0f0f0f;
+}
+
+/* Menú móvil */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #0f0f0f;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #222;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.mobile-menu a {
+    padding: 18px;
+    border-top: 1px solid #222;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    background: #1a1a1a;
+}
+
+/* ----------------- Hero ----------------- */
+.hero.hero-id {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(145deg, #0f0f0f, #1c1c1c);
+    padding-top: 100px;
+    box-shadow: inset 0 0 80px rgba(0,0,0,0.7);
+}
+
+.hero.hero-id h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    color: #00d1ff;
+    text-shadow: 0 0 10px #00d1ff;
+}
+
+.hero.hero-id p {
+    font-size: 1.25rem;
+    max-width: 750px;
+    margin: auto;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* ----------------- Profile Features ----------------- */
+.profile-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 70px auto;
+    gap: 35px;
+}
+
+.feature-card {
+    background: #1c1c1c;
+    padding: 35px 25px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+    text-align: center;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.feature-card h3 {
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+    color: #00d1ff;
+    text-shadow: 0 0 5px #00d1ff;
+}
+
+.feature-card p {
+    font-size: 1.05rem;
+    color: #ccc;
+}
+
+.feature-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    background: #292929;
+    box-shadow: 0 12px 30px rgba(0,209,255,0.4);
+}
+
+/* ----------------- Cómo funciona ----------------- */
+.how-it-works {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.2rem;
+    color: #00d1ff;
+    margin-bottom: 18px;
+    text-shadow: 0 0 5px #00d1ff;
+}
+
+.how-it-works p {
+    font-size: 1.15rem;
+    color: #ccc;
+}
+
+/* ----------------- Beneficios ----------------- */
+.benefits {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 2.2rem;
+    color: #00d1ff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 5px #00d1ff;
+}
+
+.benefits ul {
+    list-style: disc;
+    padding-left: 25px;
+    color: #ccc;
+    text-align: left;
+}
+
+.benefits ul li {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* ----------------- Usuarios Destacados ----------------- */
+.top-players {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.top-players h2 {
+    font-size: 2.2rem;
+    color: #00d1ff;
+    margin-bottom: 35px;
+    text-shadow: 0 0 5px #00d1ff;
+}
+
+.players-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.player-card {
+    background: #1c1c1c;
+    padding: 25px 20px;
+    border-radius: 20px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+.player-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 2px solid #00d1ff;
+}
+
+.player-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    color: #00d1ff;
+    text-shadow: 0 0 5px #00d1ff;
+}
+
+.player-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.player-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    background: #292929;
+    box-shadow: 0 12px 35px rgba(0,209,255,0.5);
+}
+
+/* ----------------- Footer ----------------- */
+.footer {
+    background: #121212;
+    padding: 50px 20px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    color: #00AFFF;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section.copyright {
+    text-align: right;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-section.copyright p {
+    margin-bottom: 5px;
+}
+
+
+.copyright {
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 1024px) {
+    .topbar {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #fff;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .profile-features,
+    .players-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card,
+    .player-card {
+        width: 85%;
+    }
+   .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section.copyright {
+        text-align: center;
+    }
+}
