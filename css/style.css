@@ -1,0 +1,302 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Topbar */
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    z-index: 1000;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.topbar .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00AFFF;
+}
+
+/* Menú móvil */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #1f1f1f;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu a {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    background: #00AFFF;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+}
+
+.feature-box {
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 400px;
+}
+
+/* Juegos: imagen de fondo con info encima */
+#games-box {
+    width: 100%;
+}
+
+#games-box .feature-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#games-box .feature-content {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    max-width: 500px;
+    z-index: 2;
+}
+
+/* Careers: fondo de color y foto encima a la izquierda */
+.careers-box {
+    background: #00AFFF;
+    justify-content: flex-end;
+    height: 400px;
+}
+
+.careers-box .careers-image {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    z-index: 2;
+}
+
+.careers-box .feature-content {
+    position: relative;
+    z-index: 3;
+    padding: 40px;
+    max-width: 500px;
+    text-align: right;
+    color: #ffffff;
+}
+
+/* Titulos y textos */
+.feature-box h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.feature-box p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.feature-box .btn-primary {
+    padding: 12px 25px;
+    background: #fff;
+    color: #000000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.feature-box .btn-primary:hover {
+    background: #000;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: #121212;
+    padding: 50px 20px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    color: #00AFFF;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section.copyright {
+    text-align: right;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-section.copyright p {
+    margin-bottom: 5px;
+}
+
+
+.copyright {
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+      .feature-box {
+        flex-direction: column;
+        height: auto;
+    }
+
+   .feature-box {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #games-box .feature-content,
+    .careers-box .feature-content {
+        position: relative;
+        transform: none;
+        text-align: center;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .careers-box .careers-image {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin: 0 auto 20px;
+    }
+
+    .careers-box {
+        justify-content: center;
+    }
+
+   .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section.copyright {
+        text-align: center;
+    }
+}
