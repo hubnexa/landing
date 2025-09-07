@@ -303,3 +303,55 @@ body {
         text-align: center;
     }
 }
+
+/* ----------------------------
+   Página 404
+----------------------------- */
+
+.error-hero {
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+}
+
+.error-hero h1 {
+    font-size: 6rem;
+    color: #00AFFF;
+    margin-bottom: 20px;
+}
+
+.error-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.error-hero .btn-primary {
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    background: #00AFFF;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.error-hero .btn-primary:hover {
+    background: #00d1ff;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .error-hero h1 {
+        font-size: 4rem;
+    }
+    .error-hero p {
+        font-size: 1rem;
+    }
+}
