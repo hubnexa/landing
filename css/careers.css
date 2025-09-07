@@ -434,3 +434,305 @@ body {
         font-size: 0.95rem;
     }
 }
+
+/* ----------------------------
+   Estilos específicos para Careers
+----------------------------- */
+
+.careers-hero {
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.careers-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.careers-hero p {
+    font-size: 1.3rem;
+}
+
+.careers-intro,
+.careers-benefits,
+.careers-info,
+.careers-positions,
+.careers-apply {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    color: #ccc;
+}
+
+.careers-intro h2,
+.careers-benefits h2,
+.careers-info h2,
+.careers-positions h2,
+.careers-apply h2 {
+    color: #00AFFF;
+    margin-bottom: 20px;
+}
+
+.careers-benefits ul,
+.careers-positions ul {
+    list-style: disc inside;
+    padding-left: 10px;
+}
+
+.careers-benefits li,
+.careers-positions li {
+    margin-bottom: 10px;
+}
+
+.careers-apply .apply-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.careers-apply label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.careers-apply input,
+.careers-apply select {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.careers-apply button {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #00AFFF;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.careers-apply button:hover {
+    background: #00d1ff;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .careers-hero h1 {
+        font-size: 2rem;
+    }
+    .careers-hero p {
+        font-size: 1rem;
+    }
+}
+/* ----------------------------
+   Grid interactivo para Careers (3 arriba, 2 abajo)
+----------------------------- */
+
+.careers-grid {
+    display: grid;
+    max-width: 1200px;
+    margin: 60px auto;
+    gap: 30px;
+    padding: 0 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: row dense;
+}
+
+.career-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-card h3 {
+    color: #00AFFF;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.career-card p {
+    color: #ccc;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.career-card .btn-primary {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #00AFFF;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.career-card .btn-primary:hover {
+    background: #00d1ff;
+    transform: scale(1.05);
+}
+
+.career-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* Ajuste para 2 bloques inferiores ocupando 2 columnas cada uno */
+.careers-grid .career-card:nth-child(4),
+.careers-grid .career-card:nth-child(5) {
+    grid-column: span 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .careers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .careers-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+/* ----------------------------
+   Bloques info (4) y cargos (5) para Careers
+----------------------------- */
+
+/* Info general 4 bloques */
+.careers-info-grid {
+    display: grid;
+    max-width: 1200px;
+    margin: 60px auto;
+    gap: 30px;
+    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.info-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card h3 {
+    color: #00AFFF;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.info-card p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* Cargos 5 bloques formando rectángulo 3+2 */
+.careers-positions-grid {
+    display: grid;
+    max-width: 1200px;
+    margin: 60px auto;
+    gap: 30px;
+    padding: 0 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.position-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.position-card h4 {
+    color: #00AFFF;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.position-card p {
+    color: #ccc;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.position-card .btn-primary {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #00AFFF;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.position-card .btn-primary:hover {
+    background: #00d1ff;
+    transform: scale(1.05);
+}
+
+.position-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* Ajuste para que el 4to y 5to bloque estén centrados abajo */
+.careers-positions-grid .position-card:nth-child(4) {
+    grid-column: 1 / 2;
+}
+.careers-positions-grid .position-card:nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .careers-positions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .careers-positions-grid,
+    .careers-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

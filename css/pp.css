@@ -254,78 +254,70 @@ body {
 }
 
 /* ----------------------------
-   Estilos específicos para Games
+   Estilos específicos para ToS
 ----------------------------- */
 
-.games-container {
-    max-width: 1200px;
+.tos-container {
+    max-width: 1000px;
     margin: 60px auto;
-    padding: 40px 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.game-card {
+    padding: 40px;
     background: #1a1a1a;
     border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
-.game-card img {
-    width: 100%;
-    border-radius: 8px;
+.tos-container h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
     margin-bottom: 15px;
-}
-
-.game-card h3 {
-    font-size: 1.5rem;
     color: #00AFFF;
-    margin-bottom: 10px;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 8px;
 }
 
-.game-card p {
+.tos-container h3 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.tos-container p, 
+.tos-container li {
     color: #ccc;
     margin-bottom: 15px;
 }
 
-.game-card .btn-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #00AFFF;
-    color: #121212;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
+.tos-container ul {
+    list-style: disc inside;
+    margin-bottom: 20px;
 }
 
-.game-card .btn-primary:hover {
-    background: #00d1ff;
-    transform: scale(1.05);
+.tos-container a {
+    color: #00d1ff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
-.game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+.tos-container a:hover {
+    color: #fff;
 }
 
-/* Responsive */
+/* Responsive ajustes para ToS */
 @media (max-width: 768px) {
-    .games-container {
-        padding: 20px 10px;
-        gap: 20px;
-    }
-
-    .game-card h3 {
-        font-size: 1.3rem;
-    }
-
-    .game-card p {
+    .tos-container {
+        padding: 20px;
         font-size: 0.95rem;
+    }
+
+    .tos-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .tos-container h3 {
+        font-size: 1.1rem;
     }
 }
 
@@ -378,59 +370,5 @@ body {
 
     .footer-section.copyright {
         text-align: center;
-    }
-}
-
-/* ----------------------------
-   Bloques tipo info para Games
------------------------------ */
-
-.info-box {
-    max-width: 1200px;
-    margin: 60px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0 20px 60px 20px;
-}
-
-.info-card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 30px 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-card h2 {
-    color: #00AFFF;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.info-card p {
-    color: #ccc;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-}
-
-@media (max-width: 768px) {
-    .info-box {
-        grid-template-columns: 1fr;
-        padding: 0 10px 40px 10px;
-    }
-
-    .info-card h2 {
-        font-size: 1.3rem;
-    }
-
-    .info-card p {
-        font-size: 0.95rem;
     }
 }
